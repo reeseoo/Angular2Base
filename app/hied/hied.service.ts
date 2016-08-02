@@ -1,6 +1,8 @@
 import {Injectable} from "@angular/core"
 import {Http} from '@angular/http';
 
+//Another test
+
 @Injectable()
 export class HiedService {
    endpoint_url:String = 'http://hi/apps/HiTicketsApi/api/user';
