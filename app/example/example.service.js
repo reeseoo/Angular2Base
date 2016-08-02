@@ -10,20 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require('@angular/http');
-var HiedService = (function () {
-    function HiedService(http) {
-        this.endpoint_url = 'http://hi/apps/HiTicketsApi/api/user';
+var ExampleService = (function () {
+    function ExampleService(http) {
+        this.endpoint_url = 'example_endpoint.url';
         this.http = http;
     }
-    HiedService.prototype.getHiedStuff = function (user) {
-        var a = this.http.get(this.endpoint_url).map(function (res) { return res.json(); });
+    ExampleService.prototype.getExample = function (user) {
         return this.http.get(this.endpoint_url).map(function (res) { return res.json(); });
     };
-    HiedService = __decorate([
+    ExampleService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], HiedService);
-    return HiedService;
+    ], ExampleService);
+    return ExampleService;
 }());
-exports.HiedService = HiedService;
-//# sourceMappingURL=hied.service.js.map
+exports.ExampleService = ExampleService;
+//# sourceMappingURL=example.service.js.map

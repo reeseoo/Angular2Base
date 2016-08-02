@@ -1,4 +1,4 @@
-export class HiedCount {
+export class object {
   name: string;
   id: number;
 }

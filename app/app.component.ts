@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
-import { HiedService } from './hied/hied.service'
-import { HiedCount } from './hied/hiedCount';
+import { ExampleService } from './example/example.service'
+import { object } from './example/object';
 
 @Component({
   selector: 'my-app',
   template: '<h1>{{title}}</h1> <p>hello there</p> <ul class="heroes"> <li *ngFor="let hied of hiedStuff">'+
             '<span class="badge">{{hied.id}}</span> {{hero.name}}' + 
             '</li> </ul>',
-  providers: [HiedService]
+  providers: [ExampleService]
 })
 export class AppComponent { 
     title: 'angularStuff';
-    hiedStuff: Array<HiedCount>;
+    exampleObjects: Array<object>;
 
-    constructor(private hiedService: HiedService){this.getHiedStuff();}
+    constructor(private exampleService: ExampleService){this.getExample();}
 
-    getHiedStuff(){
+    getExample(){
       debugger;
-      this.hiedStuff = this.hiedService.getHiedStuff('hello');      
+      this.exampleObjects = this.exampleService.getExample('hello');      
     }
 
 }

@@ -9,15 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hied_service_1 = require('./hied/hied.service');
+var example_service_1 = require('./example/example.service');
 var AppComponent = (function () {
-    function AppComponent(hiedService) {
-        this.hiedService = hiedService;
-        this.getHiedStuff();
+    function AppComponent(exampleService) {
+        this.exampleService = exampleService;
+        this.getExample();
     }
-    AppComponent.prototype.getHiedStuff = function () {
+    AppComponent.prototype.getExample = function () {
         debugger;
-        this.hiedStuff = this.hiedService.getHiedStuff('hello');
+        this.exampleObjects = this.exampleService.getExample('hello');
     };
     AppComponent = __decorate([
         core_1.Component({
@@ -25,9 +25,9 @@ var AppComponent = (function () {
             template: '<h1>{{title}}</h1> <p>hello there</p> <ul class="heroes"> <li *ngFor="let hied of hiedStuff">' +
                 '<span class="badge">{{hied.id}}</span> {{hero.name}}' +
                 '</li> </ul>',
-            providers: [hied_service_1.HiedService]
+            providers: [example_service_1.ExampleService]
         }), 
-        __metadata('design:paramtypes', [hied_service_1.HiedService])
+        __metadata('design:paramtypes', [example_service_1.ExampleService])
     ], AppComponent);
     return AppComponent;
 }());
